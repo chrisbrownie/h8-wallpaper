@@ -73,3 +73,6 @@ if (Test-Path $wallpaperFile) {
 
     $SetWallpaper::SystemParametersInfo(20, 0, $wallpaperFile, 3)
 }
+
+# Clean up $WallpaperSize as we don't need it any more
+$wallpaperSize = $null
