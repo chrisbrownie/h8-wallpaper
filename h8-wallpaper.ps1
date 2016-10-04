@@ -69,6 +69,7 @@ $images = @{
 # Get the images
 $imagesToProcess = @()
 foreach ($image in $images.GetEnumerator()) {
+    "Grabbing: $($image.value)"
     $imgOutPath = "$workingDirectory\h8_$($image.name).png"
     Invoke-WebRequest -Uri $image.Value -OutFile $imgOutPath
     $imagesToProcess += $imgOutPath
